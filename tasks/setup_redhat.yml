@@ -1,0 +1,6 @@
+---
+
+- name: Install  Docker SDK for Python is installed on RedHat > 7
+  ansible.builtin.yum:
+    name: python3-docker
+    state: present

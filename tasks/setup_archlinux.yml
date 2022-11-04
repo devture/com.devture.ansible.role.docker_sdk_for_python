@@ -1,0 +1,6 @@
+---
+
+- name: Install  Docker SDK for Python is installed on Archlinux
+  community.general.pacman:
+    name: python-docker
+    state: present

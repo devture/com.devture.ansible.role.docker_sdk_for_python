@@ -1,0 +1,6 @@
+---
+
+- name: Install  Docker SDK for Python is installed on Debian
+  ansible.builtin.apt:
+    name: "python{{ '3' if ansible_python.version.major == 3 else '' }}-docker"
+    state: present
