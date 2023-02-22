@@ -1,5 +1,12 @@
 ---
 
+# Tested on Rockylinux 8.7 and 9.1.
+# python-3 docker is only available from epel-release, which is not enabled by default.
+- name: Ensure epel-release is installed on RedHat > 7
+  ansible.builtin.package:
+    name: epel-release
+    state: present
+
 - name: Ensure Docker SDK for Python is installed on RedHat > 7
   ansible.builtin.package:
     name: python3-docker
